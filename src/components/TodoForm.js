@@ -1,32 +1,38 @@
 import React, {useState} from 'react';
+import {v4 as uuidv4} from 'uuid';
 
 const initalValues = {
-    id: null,
-    text: ''
+    id: '',
+    text: '',
+    completed: false
 }
 
-const TodoForm = () => {
+const TodoForm = ({addTodo}) => {
     const [formValues, setFormValues] = useState(initalValues);
 
     const changeHandler = e => {
-        setFormValues(e.target.value)
+        setFormValues({...formValues, text: e.target.value})
     }
 
     const buttonMasher = e => {
-        alert('You got things to do')
         e.preventDefault();
-        console.log('u did it')
+        if (formValues.text.trim()) {
+            addTodo({...formValues, id: uuidv4() })
+        }
+        setFormValues({...formValues, text: ''})
     }
+
 
   return (
     <div>
         <form onSubmit={buttonMasher}>
         TodoForm
         <input 
+        name='task'
         type='text' 
         value={formValues.text} 
         onChange={changeHandler}/>
-        <button>ADD ME</button>
+        <button type='submit'>ADD ME</button>
         </form>
     </div>
   )

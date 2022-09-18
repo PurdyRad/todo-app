@@ -4,8 +4,11 @@ import Todo from './Todo'
 const TodoList = ({stuffTodo}) => {
   return (
     <div>
-        <div>Todo List</div>
-        {stuffTodo.map((task) => { return <Todo key={task.todo_id} theTask={task} /> }) }
+        <h4>Todo List:</h4>
+        <ul>
+        {stuffTodo.map((task) =>  (
+             <Todo key={task.todo_id} theTask={task} /> )) }
+        </ul>
 
     </div>
   )
