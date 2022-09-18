@@ -11,7 +11,7 @@ const Todo = ({theTask}) => {
                 textDecoration: theTask.todo_completed ? 'line-through' : null 
             }}
             >
-                Let's do this {theTask.todo_text}!
+                Let's do this: {theTask.text}!
             </li>
             <button>X</button>
  

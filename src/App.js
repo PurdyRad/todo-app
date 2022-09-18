@@ -4,23 +4,23 @@ import TodoList from "./components/TodoList";
 
 const dummyData = [
   {
-    todo_id: 1,
-    todo_text: "Go workout",
+    id: 1,
+    text: "Go workout",
     todo_completed: false
   },
   {
-    todo_id: 2,
-    todo_text: "Read",
+    id: 2,
+    text: "Read",
     todo_completed: false
   },
   {
-    todo_id: 3,
-    todo_text: "Floss",
+    id: 3,
+    text: "Floss",
     todo_completed: false
   },
   {
-    todo_id: 4,
-    todo_text: "Eat some yummy food",
+    id: 4,
+    text: "Eat some yummy food",
     todo_completed: false
   },
 ]
