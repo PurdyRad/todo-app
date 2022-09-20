@@ -32,7 +32,7 @@ const TodoForm = ({addTodo}) => {
         type='text' 
         value={formValues.text} 
         onChange={changeHandler}/>
-        <button type='submit'>ADD ME</button>
+        <button type='submit'>Submit</button>
         </form>
     </div>
   )
