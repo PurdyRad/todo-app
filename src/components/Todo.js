@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Todo = ({theTask, toggleComplete}) => {
+const Todo = ({theTask, toggleComplete, bouncer}) => {
 
     const checkboxHandler = () => {
         toggleComplete(theTask.id);
+    }
+
+    const handleBouncer = () => {
+        bouncer(theTask.id)
     }
 
   return (
@@ -17,7 +21,7 @@ const Todo = ({theTask, toggleComplete}) => {
             >
                 Let's do this: {theTask.text}!
             </li>
-            <button>X</button>
+            <button onClick={handleBouncer}>X</button>
  
     </div>
   )

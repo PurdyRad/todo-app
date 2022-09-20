@@ -59,11 +59,18 @@ function App() {
     );
   }
 
+  const bouncer = (id) => {
+    setTodoData(todoData.filter(todo => todo.id !== id))
+  }
+
   return (
     <div className="App" style = {{ backgroundColor: 'grey' }}>
       <h1>What should we get done?</h1>
       <TodoForm addTodo={addTodo}/>
-      <TodoList stuffTodo={todoData} toggleComplete={toggleComplete} />
+      <TodoList 
+      stuffTodo={todoData}
+       toggleComplete={toggleComplete}
+        bouncer={bouncer} />
     </div>
   );
 }
