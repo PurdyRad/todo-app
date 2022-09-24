@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {v4 as uuidv4} from 'uuid';
+import { Button, TextField } from '@mui/material';
 
 const initalValues = {
     id: '',
@@ -25,14 +26,15 @@ const TodoForm = ({addTodo}) => {
 
   return (
     <div>
-        <form onSubmit={buttonMasher}>
+        <form className='todo-form' onSubmit={buttonMasher}>
         TodoForm
-        <input 
+        <TextField
+        label='Task' 
         name='task'
         type='text' 
         value={formValues.text} 
         onChange={changeHandler}/>
-        <button type='submit'>Submit</button>
+        <Button type='submit'>Submit</Button>
         </form>
     </div>
   )
