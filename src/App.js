@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import { Typography } from "@mui/material";
+import './App.css';
 
 const dummyData = [
   {
@@ -51,7 +53,7 @@ function App() {
       todoData.map(todo => {
         if (todo.id === id) {
           return {
-            ...todo, completed: todo.completed
+            ...todo, completed: !todo.completed
           };
         }
         return todo;
@@ -65,7 +67,7 @@ function App() {
 
   return (
     <div className="App" style = {{ backgroundColor: 'grey' }}>
-      <h1>What should we get done?</h1>
+      <Typography style = {{ padding: 16 }} variant='h1' >What should we get done?</Typography>
       <TodoForm addTodo={addTodo}/>
       <TodoList 
       stuffTodo={todoData}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Checkbox, IconButton, ListItem, Typography } from '@mui/material';
 
 const Todo = ({theTask, toggleComplete, bouncer}) => {
 
@@ -11,19 +12,23 @@ const Todo = ({theTask, toggleComplete, bouncer}) => {
     }
 
   return (
-    <div style = {{display: 'flex' }}>
-        <input type ='checkbox' onClick={checkboxHandler}/>
-            <li
+    <ListItem style = {{display: 'flex' }}>
+        <Checkbox
+        checked={theTask.completed}
+          onClick={checkboxHandler}/>
+            <Typography
+            variant='body1'
             style = {{
-                color: 'white',
                 textDecoration: theTask.completed ? 'line-through' : null 
             }}
             >
                 Let's do this: {theTask.text}!
-            </li>
-            <button onClick={handleBouncer}>X</button>
+            </Typography>
+            <IconButton onClick={handleBouncer}>
+                X
+            </IconButton>
  
-    </div>
+    </ListItem>
   )
 }
 
