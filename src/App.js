@@ -66,7 +66,7 @@ function App() {
   }
 
   return (
-    <div className="App" style = {{ backgroundColor: 'grey' }}>
+    <div className="App" style = {{ backgroundColor: '#f9bf6c' }}>
       <Typography style = {{ padding: 16 }} variant='h1' >What should we get done?</Typography>
       <TodoForm addTodo={addTodo}/>
       <TodoList 
