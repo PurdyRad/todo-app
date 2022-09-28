@@ -27,9 +27,8 @@ const TodoForm = ({addTodo}) => {
   return (
     <div>
         <form className='todo-form' onSubmit={buttonMasher}>
-        TodoForm
         <TextField
-        label='Task' 
+        label='Task to complete' 
         name='task'
         type='text' 
         value={formValues.text} 

@@ -12,14 +12,14 @@ const Todo = ({theTask, toggleComplete, bouncer}) => {
     }
 
   return (
-    <ListItem style = {{display: 'flex' }}>
+    <ListItem style = {{display: 'flex'}}>
         <Checkbox
         checked={theTask.completed}
           onClick={checkboxHandler}/>
             <Typography
             variant='body1'
             style = {{
-                textDecoration: theTask.completed ? 'line-through' : null 
+                textDecoration: theTask.completed ? 'line-through' : null,
             }}
             >
                 Let's do this: {theTask.text}!
